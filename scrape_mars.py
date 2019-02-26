@@ -49,8 +49,11 @@ def scrape():
 
 
     url3 = 'http://space-facts.com/mars/'
-    table = pd.read_html(url3)
-    tables = table[0]
+    tables = pd.read_html(url3)
+    table = tables[0]
+    table.columns = ['Description','Value']
+    table = table.set_index('Description')
+    mars_table = table.to_html()
 
 
 
@@ -90,7 +93,8 @@ def scrape():
         "body": body,
         "image_url": featured_image_url,
         "weather": mars_weather,
-        "hemisphere_image_urls": hemisphere_image_urls
+        "hemisphere_image_urls": hemisphere_image_urls,
+        "table": mars_table
     }
     return mars_data
     return tables
