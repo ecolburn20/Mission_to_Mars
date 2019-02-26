@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mars News</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="jumbotron text-center">
+      <h1>Mission to Mars</h1>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+    </div>
+
+
+    <div class="row">
+      <div class="col-md-12" style="border:1px solid lightgray; padding:10px">
+          <h2 class='font-weight-bold'>Latest Mars News</h2>
+        <h4 class="heading font-weight-bold">{{mars.title}}</h4>
+        <small>{{mars.body}}</small>
+      </div>
+    </div>
+
+  
+  <div class="row">
+    <div class="col-md-8">
+        <h2 class='font-weight-bold'>Featured Mars Image</h2>
+        <img src="{{mars.image_url}}" height='400' width='700' alt="Fig1">
+    </div>
+
+  
+  <div class="row">
+      <br>
+        <div class="col-md-4">
+            <div style="border:1px solid lightgray; padding:5px">
+            <h3 class='font-weight-bold'>Current Weather on Mars</h3>
+            <small>{{mars.weather}}</small>
+        </div>
+            <h3 class='font-weight-bold'>Mars Facts</h3>
+
+                <table>{{table}}</table>
+    
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 text-center center">
+            <h2 class="font-weight-bold">Mars Hemispheres</h2>
+            <hr>
+        
+            {% for i in mars.hemisphere_image_urls %}
+            <div style=float:left>
+            <figure class="center borderimg" style="padding:25px;" >
+            <img src="{{i.img_url}}" height='500' width="530" style="border:1px solid lightgray; padding:10px" >
+            <figcaption class="font-weight-bold">{{i.title}}</figcaption>
+            </figure>
+            </div>
+            {% endfor %}
+        </div>
+    
+    </div>
+      </div>
+</div>
+</body>
+
+</html>
+
