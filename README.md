@@ -15,6 +15,11 @@ You will also need ChromeDriver installed on your machine. For help installing, 
 Clone the repository to your local machine. <br>
 `$ git clone https://github.com/ecolburn20/Mission_to_Mars`
 
+### Using Application
+To run the application, run app.py from your machine in Anaconda Prompt. <br>
+Open up Google Chrome and type `localhost:5000` in the search bar. <br>
+Click the **Scrape New Data** button. 
+
 ### Built With
 * [MongoDB](https://www.mongodb.com/)
 * [Flask](https://www.fullstackpython.com/flask.html)
