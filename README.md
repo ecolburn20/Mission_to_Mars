@@ -9,10 +9,10 @@ These instructions will get you a copy of the project up and running on your loc
 You will need MongoDB installed if you want to run this application. For help installing MongoDB, visit
 `https://docs.mongodb.com/manual/installation/`
 
-You will also need ChromeDriver installed on your machine. For help installing, visit
+You will also need ChromeDriver installed on your machine. For help installing, visit <br>
 `http://chromedriver.chromium.org/`
 
-Clone the repository to your local machine.
+Clone the repository to your local machine. <br>
 `$ git clone https://github.com/ecolburn20/Mission_to_Mars`
 
 ### Built With
